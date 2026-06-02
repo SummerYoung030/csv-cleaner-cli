@@ -2,7 +2,7 @@
 
 Benchmark Task：Python CLI 清洗 CSV 数据。
 
-## 一键在线测试（推荐给 HR）
+## 一键在线测试
 
 将本项目推送到 GitHub 后，打开 **Actions** 页面，点击 **Run workflow** 即可触发评测：
 
