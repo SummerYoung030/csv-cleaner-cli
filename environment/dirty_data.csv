@@ -1,0 +1,14 @@
+name,email,score
+Alice ,alice@example.com , 95
+Bob,bob@example.com,88
+
+Charlie,charlie@example.com,abc
+Alice,alice@example.com,95
+Dan,dan@example.com
+Eve,eve@example.com,77,extra
+, , 
+Frank , frank@example.com , 80
+Grace,grace@example.com,-3
+Henry,henry@example.com,12.5
+Ivy,ivy@example.com,70
+Ivy,ivy@example.com,70

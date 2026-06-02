@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>csv-cleaner-cli 测试报告</title>
+  <style>
+    :root { --ok: #16a34a; --bg: #f8fafc; --card: #fff; --text: #0f172a; --muted: #64748b; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 2rem; line-height: 1.6; }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    .card { background: var(--card); border-radius: 12px; padding: 1.5rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); margin-bottom: 1rem; }
+    h1 { font-size: 1.5rem; margin: 0 0 .5rem; }
+    .badge { display: inline-block; background: #dcfce7; color: var(--ok); font-weight: 700; padding: .35rem .75rem; border-radius: 999px; font-size: .9rem; }
+    .muted { color: var(--muted); font-size: .95rem; }
+    a.btn { display: inline-block; margin-top: 1rem; background: #2563eb; color: #fff; text-decoration: none; padding: .65rem 1.2rem; border-radius: 8px; font-weight: 600; }
+    a.btn:hover { background: #1d4ed8; }
+    code { background: #f1f5f9; padding: .15rem .4rem; border-radius: 4px; font-size: .9em; }
+    ol { padding-left: 1.25rem; }
+    li { margin: .4rem 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>csv-cleaner-cli</h1>
+      <p><span class="badge">本地逻辑测试 PASS</span></p>
+      <p class="muted">验证时间：2026-06-02 · cleaner.py + test_logic.py</p>
+    </div>
+
+    <div class="card">
+      <h2>在线一键测试链接（推送到 GitHub 后可用）</h2>
+      <p>HR 或评委打开下方链接，点击 <strong>Run workflow</strong> → <strong>Run workflow</strong>，等待约 2–5 分钟，绿色 ✓ 即表示 Docker 评测通过。</p>
+      <a class="btn" id="actions-link" href="https://github.com/SummerYoung030/csv-cleaner-cli/actions/workflows/benchmark-test.yml" target="_blank" rel="noopener">打开 GitHub Actions 一键测试</a>
+      <p class="muted" style="margin-top:1rem">仓库地址：</p>
+      <p><code>https://github.com/SummerYoung030/csv-cleaner-cli</code></p>
+      <p class="muted">Actions 测试页：</p>
+      <p><code>https://github.com/SummerYoung030/csv-cleaner-cli/actions/workflows/benchmark-test.yml</code></p>
+    </div>
+
+    <div class="card">
+      <h2>3 步生成可点击链接</h2>
+      <ol>
+        <li>在 GitHub 新建仓库 <code>csv-cleaner-cli</code>（Public）</li>
+        <li>在项目根目录执行：
+          <pre><code>git init
+git add .
+git commit -m "Add csv-cleaner-cli benchmark task"
+git branch -M main
+git remote add origin https://github.com/&lt;用户名&gt;/csv-cleaner-cli.git
+git push -u origin main</code></pre>
+        </li>
+        <li>打开 Actions 页，手动触发或查看 push 后的自动运行结果</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>本地命令（与评测机一致）</h2>
+      <p><code>bash tests/test.sh</code></p>
+      <p class="muted">需要 Docker 运行中；仅宿主机执行 docker build + docker run，不在宿主机调用 python。</p>
+    </div>
+  </div>
+  <script>
+    const username = new URLSearchParams(location.search).get('user');
+    if (username) {
+      const url = `https://github.com/${username}/csv-cleaner-cli/actions/workflows/benchmark-test.yml`;
+      const link = document.getElementById('actions-link');
+      link.href = url;
+      link.textContent = '打开 GitHub Actions 一键测试';
+    }
+  </script>
+</body>
+</html>

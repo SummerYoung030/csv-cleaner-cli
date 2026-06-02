@@ -1,0 +1,5 @@
+.local_output/
+__pycache__/
+*.pyc
+.idea/
+*.zip
